@@ -1,0 +1,86 @@
+.grid-template {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid #b9b9b9;
+    padding: 20px;
+    position: relative;
+}
+
+.content-wrap {
+    height: 250px;
+    overflow-y: scroll;
+}
+
+.grid-item h3 {
+    position: absolute;
+    background-color: #ffffff;
+    top: -35px;
+    left: 20px;
+}
+
+.two-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#commission, #income {
+    position: relative;
+    cursor: pointer;
+}
+
+#commission::after, #income::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+#commission:hover::after, #income:hover::after {
+    opacity: 1;
+}
+
+@media (max-width: 1200px) {
+    .grid-item {
+        height: fit-content
+    }
+    .grid-item h3 {
+        top: -30px;
+        font-size: 1.25rem;
+        height: fit-content
+    }
+}
+
+@media (max-width: 900px) {
+    .grid-template {
+        height: 80%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .grid-item {
+        height: fit-content
+    }
+    .grid-item h3 {
+        top: -30px;
+        height: fit-content
+    }
+}

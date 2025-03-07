@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    font-family: "Montserrat", sans-serif;
+    font-weight: var(--normal);
+    font-style: normal;
+    color: var(--light-text-color);
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* IE/Edge */
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+    display: none; 
+}
+
+:root {
+    --theme-color-1: #0D4715;
+    --theme-color-2: #41644A; 
+    --theme-color-3: #2C3930;
+    --bg-color: #F1F0E9;
+    --dark-bg-color: #2C3930;
+    --hover-color: #71b288;
+    --dark-text-color: #fff;
+    --light-text-color: #2C3930;
+    --font-h1: 3.25rem;
+    --font-h2: 2rem;
+    --font-h3: 1.5rem;
+    --font-h4: 1.25rem;
+    --font-text: 1rem;
+    --radius: 4px;
+    --radius-full: 50px;
+    --regular: 250;
+    --normal: 350;
+
+}
+
+h1 {
+    font-size: var(--font-h1);
+}
+h2 {
+    font-size: var(--font-h2);
+}
+h3 {
+    font-size: var(--font-h3);
+}
+h4 {
+    font-size: var(--font-h4);
+}
+p, th {
+    font-size: var(--font-text);
+}
+
+input[type="checkbox"], input[type="range"], button {
+    cursor: pointer;
+}
+
+input[type="password"],
+input[type="email"],
+input[type="date"],
+input[type="text"],
+input[type="float"],
+input[type="number"],
+select
+{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: var(--radius);
+}
+
+
+.hidden {
+    display: none;
+}
+
+button {
+    background-color: var(--theme-color-3);
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+/* Table settings */
+
+
+table {
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: var(--font-text); 
+    text-align: left;
+    border-collapse: collapse; 
+    width: 100%; 
+    table-layout: auto;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: var(--theme-color-1);
+    color: var(--dark-text-color)
+}
+table tr{
+    cursor: pointer;
+}
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+    
+:root {
+    --theme-color-1: #0D4715;
+    --theme-color-2: #41644A; 
+    --bg-color: #F1F0E9;
+    --dark-bg-color: #2C3930;
+    --hover-color: #71b288;
+    --dark-text-color: #fff;
+    --light-text-color: #2C3930;
+    --font-h1: 2.25rem;
+    --font-h2: 1.75rem;
+    --font-h3: 1.2rem;
+    --font-h4: 1rem;
+    --font-text: 0.8rem;
+    --radius: 4px;
+    --radius-full: 50px;
+    --regular: 250;
+    --normal: 350;
+}
+
+}

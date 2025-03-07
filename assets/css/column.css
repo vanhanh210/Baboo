@@ -1,0 +1,29 @@
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+.info-row:last-child {
+    border-bottom: none;
+}
+.info-label {
+    font-weight: bold;
+}
+.info-value {
+    text-align: right;
+}
+.column-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 20px;
+    gap: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.info-row {
+    gap: 100px;
+}

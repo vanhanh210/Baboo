@@ -1,0 +1,54 @@
+/* Import Google Font - Poppins */
+::selection{
+  color: #fff;
+  background: #71b288;
+}
+.wrapper{
+  width: 400px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 25px 40px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+}
+header h2{
+  font-size: 24px;
+  font-weight: 600;
+}
+header p{
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center; 
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 10px; 
+}
+.searchbox {
+  width: 200px;
+}
+
+
+@media (max-width: 768px) {
+  .filter-form {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: bottom 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  .filter-form.active {
+    bottom: 0;
+  }
+  .filter-form .flex-wrap {
+    display: block;
+  }
+}
+

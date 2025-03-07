@@ -1,0 +1,654 @@
+/* General Styles */
+* {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Image */
+
+.manage-head {
+    position: relative;
+    height: 30vh;
+    display: flex;
+    align-items: flex-end;
+    width: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    background-size: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.manage-head h1 {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    font-weight: var(--regular);
+}
+
+.manage-head h1:before, .manage-head h1:after {
+    background-color: rgba(255, 255, 255, 0.7);
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.manage-head h1:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+.manage-head h1:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+.manage-head::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}
+
+
+#home, #info, #managers, #sales {
+    background: url('../photos/VintageWinterPark.jpg') center/cover no-repeat;
+}
+#book, #post, #user-manager, #contract, #noti {
+    background: url('../photos/f38ead14-0acf-4d07-8c44-acffebf3e519.jpg') center/cover no-repeat;
+}
+
+/* Flow buttons */
+#flow-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+}
+
+/* Sidebar */
+
+.sidebar {
+    /* display: none; */
+    width: fit-content;
+    height: 100vh;
+    background-color: var(--theme-color-2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.sidebar ul li a:hover, .sidebar ul li .accordion-toggle:hover {
+    background-color: var(--hover-color);
+}
+
+.sidebar .logo-container {
+    display: none;
+}
+
+.sidebar a.active {
+    font-weight: bold;
+    background-color: var(--theme-color-3);
+    padding-left: 10px; /* Adjust padding to align text */
+}
+
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background: var(--theme-color-1);
+    border-left: 1px solid #fff;
+    margin-left: 10px;
+    transition: max-height 0.3s ease-out; /* Smooth expanding animation */
+    padding: 0 10px; /* Ensure padding is visible when open */
+}
+
+.accordion-item .accordion-toggle {
+    cursor: pointer;
+}
+
+/* Login */
+.contact {
+    margin: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    color: #ffffff;
+    fill: #ffffff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.contact img {
+    margin-right: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.login {
+    position: relative;
+    background: url("../photos/VintageWinterPark.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+}
+
+.login::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}
+
+.login-container {
+    background-color: #ffffff;
+    z-index: 1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.login-container .logo-container {
+    align-items: center;
+    display: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.func-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.error {
+    color: #ff0000;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    min-width: fit-content;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+#search_box, #search_box_sale {
+    border-radius: var(--radius-full);
+    height: fit-content;
+    align-self: center;
+    width: 40%;
+    float: right;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555555;
+}
+
+
+input[type="float"],
+select,
+input[type="date"] {
+    width: fit-content;
+}
+
+button[type="submit"] {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    background-color: var(--theme-color-2);
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+button[type="submit"]:hover {
+    background-color: var(--hover-color);
+}
+
+
+/* Header */
+.header-container {
+    z-index: 1000;
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: var(--theme-color-3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333333;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 85px;
+    width: 85px;
+}
+
+.user-dropdown {
+    position: relative;
+}
+
+.user-dropdown button {
+    background-color: #71b288;
+    border: none;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.user-dropdown button:hover {
+    background-color: #1b743a;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1001;
+}
+
+a {
+    cursor: pointer;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: #333333;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Manage User */
+.head-container {
+    column-gap: 20px;
+    background-color: #ffffff;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.main-content {
+    width: 100%;
+    padding: 5%;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.create, .delete, .edit {
+    display: inline-block;
+    height: fit-content;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+/* Building Management Table */
+.manage-building-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.create-building {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #71b288;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.create-building:hover {
+    background-color: #1b743a;
+}
+
+.flex-wrap-fit {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    gap: 20px;
+}
+.flex-wrap {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    overflow-x: auto; /* Chỉ hiển thị scrollbar khi cần */
+    scrollbar-width: thin; /* Tinh chỉnh độ dày của scrollbar (Firefox) */
+    scrollbar-color: #ccc transparent; /* M àu thanh cuộn */
+}
+
+/* Ẩn scrollbar mặc định trên Chrome, Safari */
+.flex-wrap::-webkit-scrollbar {
+    height: 6px; /* Độ cao của scrollbar */
+    background: transparent; /* Ẩn scrollbar khi không cần */
+}
+
+/* Hiển thị scrollbar khi có overflow */
+.flex-wrap::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+/* Hover scrollbar */
+.flex-wrap::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+.cancel-btn {
+    width: fit-content;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid #71b288;
+    border-radius: 4px;
+    color: #111;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cancel-btn:hover {
+    background-color: #1b743a;
+    color: #ffffff;
+}
+
+.crud-btn {
+    display: flex; gap: 10px;
+    height: 100%;
+    border: none;
+}
+
+.crud-btn button {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+}
+
+.crud-btn button img {
+    width: 20px;
+    height: 20px;
+}
+.search-container {
+    position: relative;
+    width: 300px;
+}
+
+#searchInput,
+#userSearchInput {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.dropdown-search,
+.user-dropdown-search {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item,
+.user-dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdown-item:hover, 
+.user-dropdown-item:hover  {
+    background: #f0f0f0;
+}
+
+.selected-users, .selected-buildings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.user-tag {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    background: #e4e6eb;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.remove-tag {
+    margin-left: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #71b288;
+}
+
+.available {
+    color: rgb(0, 87, 0);
+}
+.occupied {
+    color: rgb(110, 0, 0);
+}
+.blue-txt {
+    color: rgb(0, 11, 110);
+    font-weight: 400;
+}
+
+#editor {
+    height: 50vh;
+}
+#close-btn, #filter-icon{
+    cursor: pointer;
+    font-size: 20px;
+    display: none;
+}
+#private_section, #public_section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+#private_section input[type="checkbox"], #public_section input[type="checkbox"] {
+    transform: scale(1.2);
+}
+@media (max-width: 768px) {
+    .sidebar .logo-container {
+        display: block;
+    }
+    .contact {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    
+    .header-container {
+        padding: 10px;
+        display: block;
+    }
+    .logo-container {
+        display: none;
+    }
+    .logo-container img {
+        width: 80px;
+        height: 80px;
+    }
+    .sidebar {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        transition: transform 0.3s ease;
+        z-index: 1000;
+        padding: 20px;
+        transform: translateX(-100%); 
+    }
+    
+    .sidebar.active {
+        transform: translateX(0); 
+    }
+    .head-container {
+        justify-content: center;
+    }
+    .column-container {
+        width: fit-content;
+        overflow: hidden;
+        justify-content: space-between;
+        gap: 50px
+    }
+    .column-container .column .info-row {
+        font-size: 15px;
+        display: block;
+    }
+    .column-container .column .info-row .info-value {
+        text-align: left;
+    }
+    .filter-container {
+        padding: 20px;
+    }
+    #close-btn, #filter-icon{
+        display: block;
+    }
+    .right-sidebar {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+        margin: 0;
+    }
+    .right-sidebar.active {
+        transform: translateY(0);
+    }
+    .right-sidebar .price-input {   
+        display: block;
+    }
+    .right-sidebar .price-input .field{
+        display: flex;
+        width: 200px;
+        justify-content: space-between;
+    }
+    .right-sidebar .price-input .field input{
+        width: 100px;
+    }
+    .right-sidebar .separator {
+        display: none;
+    }
+    .right-sidebar .slider-container {
+        width: 80%;
+        margin: auto;
+    }
+    .title {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .title svg {
+        position: absolute;
+        left: 30px;
+        top: 30px;
+    }
+    table {
+        font-size: 13px;
+        margin-top: 20px;
+    }
+    .icon-container {
+        padding: 5px;
+    }
+}

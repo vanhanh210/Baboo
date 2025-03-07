@@ -1,0 +1,18 @@
+.building-info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 1%;
+}
+
+.building-info-container img {
+    width: 300px;
+    height: 300px;
+}
+
+@media (max-width: 768px) {
+    .building-info-container {
+        display: block;
+    }
+}
